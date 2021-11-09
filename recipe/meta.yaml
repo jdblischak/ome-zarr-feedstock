@@ -1,5 +1,5 @@
 {% set name = "ome-zarr" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ome-zarr-{{ version }}.tar.gz
-  sha256: a3c6d2b3e2a0a085e77b9a21c9d7eae3f5d690af83dbded6c210c0944d3dae51
+  sha256: 7e1c0304982252bcb5fd0e3b68ff67e0aca09b3928f78fe090f2a48e46576ba4
 
 build:
   number: 0
