@@ -1,11 +1,11 @@
-About ome-zarr
-==============
+About ome-zarr-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ome-zarr-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/ome/ome-zarr-py
 
 Package license: BSD-2-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ome-zarr-feedstock/blob/main/LICENSE.txt)
 
 Summary: Implementation of images in Zarr files.
 

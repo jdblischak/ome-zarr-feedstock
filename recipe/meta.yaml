@@ -1,5 +1,5 @@
 {% set name = "ome-zarr" %}
-{% set version = "0.6.1" %}
+{% set version = "0.7.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ome-zarr-{{ version }}.tar.gz
-  sha256: cf543fba273e5473f625bdf08f82de42e048d2677d58f53204489ddb395e92df
+  sha256: 755a3ef85b0f15ab7c82b699a3f4849573c54850b21ca9b61044b6fd1bb3df5f
 
 build:
   number: 0
@@ -24,6 +24,7 @@ requirements:
   run:
     - aiohttp
     - dask-core
+    - distributed
     - fsspec !=2021.07.0
     - numpy
     - python >=3.7
