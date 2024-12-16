@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ome-zarr-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ome-zarr-{{ version }}.tar.gz
   sha256: 01392f1d1fc54d6b819a0125c99550c14ab89a24e1fccdfd58f09a2c4f2326dc
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - ome_zarr = ome_zarr.cli:main
@@ -20,14 +20,14 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
   run:
     - aiohttp
     - dask-core
     - distributed
     - fsspec !=2021.07.0
     - numpy
-    - python >=3.7
+    - python >={{ python_min }}
     - requests
     - scikit-image
     - toolz
@@ -41,6 +41,7 @@ test:
     - ome_zarr --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/ome/ome-zarr-py
