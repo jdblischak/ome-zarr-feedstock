@@ -20,14 +20,14 @@ build:
 requirements:
   host:
     - pip
-    - python {{ python_min }}
+    - python >3.10
   run:
     - aiohttp
     - dask-core
     - distributed
     - fsspec !=2021.07.0
     - numpy
-    - python >={{ python_min }}
+    - python >3.10
     - requests
     - scikit-image
     - toolz
@@ -41,7 +41,7 @@ test:
     - ome_zarr --help
   requires:
     - pip
-    - python {{ python_min }}
+    - python >3.10
 
 about:
   home: https://github.com/ome/ome-zarr-py
