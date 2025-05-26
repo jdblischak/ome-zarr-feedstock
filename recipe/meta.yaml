@@ -11,7 +11,7 @@ source:
   sha256: f178e336412eaefdb74172b280095cd9bd497bfeb235c1b1c2b0965c21aa1af0
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - ome_zarr = ome_zarr.cli:main
@@ -38,6 +38,7 @@ test:
   imports:
     - ome_zarr
   commands:
+    - python -c "import importlib.metadata; print(importlib.metadata.version('ome_zarr'))" | grep -q {{ version }}
     - pip check
     - ome_zarr --help
   requires:
