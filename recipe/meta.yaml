@@ -1,6 +1,6 @@
 {% set name = "ome-zarr" %}
 {% set version = "0.11.1" %}
-
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -20,7 +20,7 @@ build:
 requirements:
   host:
     - pip
-    - python >3.10
+    - python {{ python_min }}
     - setuptools >=64
     - setuptools-scm >=8.0
   run:
@@ -29,7 +29,7 @@ requirements:
     - distributed
     - fsspec >=0.8,!=2021.07.0,!=2023.9.0
     - numpy
-    - python >3.10
+    - python >={{ python_min }}
     - requests
     - scikit-image
     - toolz
@@ -44,7 +44,7 @@ test:
     - ome_zarr --help
   requires:
     - pip
-    - python >3.10
+    - python {{ python_min }}
 
 about:
   home: https://github.com/ome/ome-zarr-py
@@ -57,3 +57,4 @@ extra:
     - constantinpape
     - joshmoore
     - k-dominik
+    - jdblischak

@@ -144,6 +144,7 @@ Feedstock Maintainers
 =====================
 
 * [@constantinpape](https://github.com/constantinpape/)
+* [@jdblischak](https://github.com/jdblischak/)
 * [@joshmoore](https://github.com/joshmoore/)
 * [@k-dominik](https://github.com/k-dominik/)
 
